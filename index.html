@@ -3,10 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Mi Currículum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Bienvenido a mi página web</h1>
-    <p>¡Hola! Esta es mi página web alojada en GitHub Pages.</p>
+    <div class="background-animation"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Currículum</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#intro">Introducción</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Acerca de mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <section id="intro" class="my-5 fade-in">
+            <h1 class="display-4">Bienvenido a mi Currículum</h1>
+            <p class="lead">Desarrollador web y experto en ciberseguridad</p>
+        </section>
+
+        <section id="about" class="my-5 fade-in">
+            <h2>Acerca de mí</h2>
+            <p>Soy un apasionado desarrollador web con experiencia en ciberseguridad. Me encanta crear soluciones innovadoras y seguras.</p>
+        </section>
+
+        <section id="skills" class="my-5 fade-in">
+            <h2>Habilidades</h2>
+            <div class="skill-bar">
+                <h5>Python</h5>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <h5>JavaScript</h5>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <h5>Ciberseguridad</h5>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="my-5 fade-in">
+            <h2>Experiencia</h2>
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="card-title">Desarrollador Web Senior</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Empresa XYZ | 2018 - Presente</h6>
+                    <p class="card-text">Desarrollo de aplicaciones web seguras y escalables utilizando las últimas tecnologías.</p>
+                </div>
+            </div>
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="card-title">Analista de Ciberseguridad</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Empresa ABC | 2015 - 2018</h6>
+                    <p class="card-text">Implementación de medidas de seguridad y análisis de vulnerabilidades en sistemas críticos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="my-5 fade-in">
+            <h2>Educación</h2>
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="card-title">Máster en Ciberseguridad</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Universidad Tech | 2014 - 2015</h6>
+                </div>
+            </div>
+            <div class="card my-3">
+                <div class="card-body">
+                    <h5 class="card-title">Grado en Ingeniería Informática</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Universidad Tech | 2010 - 2014</h6>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="my-5 fade-in">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <div class="mt-3">
+                <a href="https://linkedin.com" target="_blank" class="btn btn-outline-primary me-2">LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2023 Mi Currículum. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
