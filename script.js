@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Validación del formulario de contacto
 document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Evita el comportamiento predeterminado del formulario
+    e.preventDefault(); // Previene el comportamiento por defecto del formulario
 
     // Obtén los valores del formulario
     const name = document.getElementById("name").value;
@@ -26,19 +26,22 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     // Envía los datos usando EmailJS
     emailjs.send("service_dyv0927", "template_rom6vc8", {
-        from_name: name,
-        from_email: email,
-        message: message
+        from_name: name,         // Asigna el nombre al placeholder {{from_name}}
+        from_email: email,       // Incluye el correo del remitente (opcional, pero recomendable)
+        message: message         // Asigna el mensaje al placeholder {{message}}
     })
     .then(function(response) {
+        // Éxito: muestra un mensaje de confirmación
         alert("Mensaje enviado con éxito.");
         console.log("SUCCESS!", response.status, response.text);
-        document.getElementById("contactForm").reset(); // Limpia el formulario
+        document.getElementById("contactForm").reset(); // Limpia el formulario después de enviarlo
     }, function(error) {
+        // Error: muestra un mensaje de error
         alert("Error al enviar el mensaje. Por favor, intenta de nuevo.");
         console.log("FAILED...", error);
     });
 });
+      
 
     // Animación suave al hacer scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
