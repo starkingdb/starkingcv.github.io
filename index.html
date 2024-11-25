@@ -138,30 +138,32 @@
     <section class="contact py-5">
         <div class="container">
             <h2 class="text-center mb-4 wow fadeInUp">Comunícate conmigo</h2>
-            <form id="contactForm" class="wow fadeInUp" data-wow-delay="0.2s">
-                <div class="row mb-4">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <div class="form-outline">
-                            <input type="text" id="name" class="form-control" required />
-                            <label class="form-label" for="name">Nombre</label>
+                <form 
+                    id="contactForm" 
+                    action="https://formsubmit.co/TU_CORREO@EMAIL.COM" 
+                    method="POST">
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <div class="form-outline">
+                                <input type="text" name="name" id="name" class="form-control" required />
+                                <label class="form-label" for="name">Nombre</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-outline">
+                                <input type="email" name="email" id="email" class="form-control" required />
+                                <label class="form-label" for="email">Correo electrónico</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-outline">
-                            <input type="email" id="email" class="form-control" required />
-                            <label class="form-label" for="email">Correo electrónico</label>
-                        </div>
+                    <div class="form-outline mb-4">
+                        <textarea name="message" class="form-control" id="message" rows="4" required></textarea>
+                        <label class="form-label" for="message">Mensaje</label>
                     </div>
-                </div>
-                <div class="form-outline mb-4">
-                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                    <label class="form-label" for="message">Mensaje</label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
-            </form>
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
+                </form>
         </div>
     </section>
-    
     <footer class="bg-dark text-center text-white py-4">
         <div class="container">
             <p>&copy; 2023 StarkingDB. Todos los derechos reservados.</p>
